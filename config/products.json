@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+            "id": "c85a14csd",
+            "titulo": "Titulo 1",
+            "descricao": "Descricao 1",
+            "img": "/images/product1.png",
+            "preco": 55.85
+        },
+        {
+            "id": "512d5asd",
+            "titulo": "Titulo 2",
+            "descricao": "Descricao 2",
+            "img": "/images/product2.png",
+            "preco": 30.85
+        },
+        {
+            "id": "ascd15adas",
+            "titulo": "Titulo 3",
+            "descricao": "Descricao 3",
+            "img": "/images/product3.png",
+            "preco": 96.99
+        }
+    ]
+}

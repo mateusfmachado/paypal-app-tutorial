@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Início - Loja IT</title>
+    <style>
+        .flex { display: flex; }
+        .horizontal { flex-direction: row; }
+        .flex-1 { flex: 1; }
+        .text-center { text-align: center; }
+        .btn-cta {
+            color: #fefefe;
+            background-color: #ff1100;
+            font-size: 1rem;
+            border-radius: 10px;
+            border: 0;
+            padding: 10px 15px;
+        }
+        .flex-center {
+            justify-content: center;
+            align-items: center;
+        }
+        .img-main {
+            width: 90%;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="text-center">Loja IT</h1>
+
+        <hr />
+        <br />
+
+        <div class="flex horizontal">
+            <% for(var i=0; i<products.length; i++) { %>
+
+                <div class="flex-1">
+
+                    <div class="flex flex-center">
+                        <img src="<%= products[i].img %>" class="img-main" /> 
+                    </div> 
+
+                    <br />
+                    <h2 class="text-center"><%= products[i].titulo %></h2>
+                    <p class="text-center"><%= products[i].descricao %></p>                    
+                    <h3 class="text-center">Apenas R$ <%= products[i].preco %></h3>
+                    <br />
+
+                    <form action="/buy?id=<%= products[i].id %>" class="flex flex-center" method="POST">
+                        <input type="submit" class="btn-cta" value="COMPRAR">
+                    </form>
+
+                </div>
+
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
